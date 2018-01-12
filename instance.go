@@ -68,7 +68,7 @@ func (i *Instance) UnmarshalJSON(b []byte) error {
 
 	i.name = j.Name
 
-	s, err := i.unmarshalStorageJSONFunc(b)
+	s, err := i.unmarshalStorageJSONFunc(j.Storage)
 	if err != nil {
 		return errors.Wrap(err, "failed to unmarshal memory storage")
 	}
