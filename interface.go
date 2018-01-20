@@ -7,6 +7,7 @@ import (
 	"github.com/anothermemory/unit"
 )
 
+// Interface represents memory interface
 type Interface interface {
 	// Storage must be able to marshal it's settings to json
 	json.Marshaler

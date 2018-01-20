@@ -67,7 +67,7 @@ func (i *Instance) MarshalJSON() ([]byte, error) {
 	return json.Marshal(instanceJSON{Name: i.name, Root: i.root.ID(), Storage: bytes})
 }
 
-// UnmarshalStorageJSON restores memory instance from json representation
+// UnmarshalJSON restores memory instance from json representation
 func (i *Instance) UnmarshalJSON(b []byte) error {
 	var j instanceJSON
 	err := json.Unmarshal(b, &j)
